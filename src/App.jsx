@@ -567,9 +567,13 @@ return (
     <FaLinkedinIn />
   </a>
 
-  <a href="#" target="_blank" rel="noreferrer" aria-label="GitHub">
-    <FaGithub />
-  </a>
+  <a
+  href="https://github.com/hendrikwanputra-prog"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <FaGithub />
+</a>
 
   <a
     href="https://wa.me/6282163339515"
@@ -973,13 +977,13 @@ return (
             >
               View Detail
             </button>
-<a
-  href="https://github.com/hendrikwanputra-prog/rekam-medis-gigi"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="project-btn outline"
->
-  GitHub
+            <a
+              href="https://github.com/hendrikwanputra-prog/rekam-medis-gigi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-btn outline"
+            >
+              GitHub
 </a>
               </div>
             </div>
@@ -1035,13 +1039,14 @@ return (
               >
                 View Detail<p className="modal-description"></p>
               </button>
-               <button
-                type="button"
-                className="project-btn outline"
-                disabled
-              >
-                GitHub Soon
-              </button>
+        <a
+          href="https://github.com/hendrikwanputra-prog/portfolio-saya"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-btn outline"
+        >
+          GitHub
+        </a>
               </div>
             </div>
           </motion.div>
