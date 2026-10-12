@@ -147,6 +147,48 @@ gallery: [
     tech: ['Next.js', 'React', 'TypeScript', 'CSS'],
   },
 
+  
+  zaiLiving: {
+    title: 'ZaiLiving — Property Rental Platform',
+    role: 'Frontend Developer',
+    status: 'In Development',
+    description:
+      'Platform pencarian dan penyewaan kos berbasis web dengan desain modern dan responsif. Memungkinkan pengguna mencari properti, melihat detail kos, mengajukan sewa, serta mengelola pengajuan dan properti melalui dashboard Tenant dan Owner.',
+    features: [
+      'Responsive layout',
+      'Property search and filtering',
+      'Property detail',
+      'Rental application',
+      'Tenant dashboard',
+      'Owner dashboard',
+      'Property management',
+      'Application approval and rejection',
+      'Role-based access',
+      'Login and registration',
+    ],
+    
+gallery: [
+  '/project-04/homedhasboard.png',
+  '/project-04/about.png',
+  '/project-04/booking.png',
+  '/project-04/submit.png',
+  '/project-04/login.png',
+  '/project-04/find-a-kost.png',
+  '/project-04/viewdetails.png',
+  '/project-04/tenantdhasboard.png',
+],
+
+    tech: [
+      'React',
+      'Vite',
+      'JavaScript',
+      'React Router DOM',
+      'CSS',
+      'localStorage',
+    ],
+  },
+
+
 }
       const getTechIcon = (tech) => {
         const icons = {
@@ -436,10 +478,10 @@ return (
 
           <p className="hero-greeting">Hello, I'm</p>
           <h1>Hendrikwan Putra Zai</h1>
-          <h2>Full-Stack Web Developer</h2>
+          <h2>Web Developer | IT Systems | IT Support</h2>
 
           <p className="description">
-            Lulusan Sistem Informasi yang berfokus pada pengembangan aplikasi web, pengelolaan database, dan dukungan teknis menggunakan React, PHP, Laravel, MySQL, dan teknologi web lainnya.
+            Memiliki pengalaman di bidang Web Development dan IT Support, dengan keahlian dalam pengembangan aplikasi web, pemeliharaan sistem informasi, dan dukungan teknis. Menguasai PHP, Laravel, JavaScript, Python, dan MySQL, serta memahami RESTful API, pengelolaan basis data, debugging, dan desain UI/UX menggunakan Figma.
           </p>
 
 <div className="hero-buttons">
@@ -555,13 +597,14 @@ return (
 
             <div className="about-photo-info">
               <h3>Hendrikwan Putra Zai</h3>
-              <p>Full-Stack Web Developer</p>
+              <p>Web Developer | IT Systems | IT Support</p>
             </div>
 
             <div className="about-socials">
   <a href="mailto:hendrikwanputra@gmail.com" aria-label="Email">
     <FaEnvelope />
   </a>
+  
 
   <a href="#" target="_blank" rel="noreferrer" aria-label="LinkedIn">
     <FaLinkedinIn />
@@ -841,7 +884,7 @@ return (
             transition={{ duration: 0.6 }}
             viewport={{ once: false }}
           >
-            <div className="experience-year">2026 - Present</div>
+            <div className="experience-year">17 April 2026 - 10 Augustus 2026</div>
             <h3>Web Developer - Academic Project</h3>
             <h4>Sistem Rekam Medis Klinik Gigi</h4>
             <p>
@@ -884,9 +927,10 @@ return (
             <h3>IT Support & Application Support</h3>
             <h4>OQ Clinic Dentist</h4>
             <p>
-              Mendukung operasional klinik melalui troubleshooting aplikasi, perangkat komputer, dan jaringan dasar.
-              Membantu staf dalam penggunaan sistem, pengelolaan data,
-              serta memahami alur kerja klinik yang relevan dengan pengembangan sistem informasi berbasis web.
+              Menangani troubleshooting perangkat lunak dan sistem IT, melakukan instalasi, konfigurasi, 
+              serta pemeliharaan aplikasi dan sistem informasi. 
+              Memberikan dukungan teknis kepada staf klinik serta merancang dan 
+              mengembangkan Sistem Informasi Rekam Medis Berbasis Web menggunakan Laravel dan MySQL.
             </p>
           </motion.div>
 
@@ -903,9 +947,8 @@ return (
             <h3>IT Support & Application Support</h3>
             <h4>PT Valche Pelita Indonesia</h4>
             <p>
-              Memberikan dukungan teknis pada aplikasi operasional perusahaan, termasuk instalasi, konfigurasi, dan troubleshooting software.
-              Membantu penggunaan Accurate untuk transaksi, stok, invoice, dan surat jalan,
-              sehingga memahami kebutuhan sistem dalam proses bisnis.
+              Menangani troubleshooting perangkat lunak dan aplikasi operasional perusahaan, termasuk instalasi, konfigurasi, serta pemeliharaan software. 
+              Menangani kendala penggunaan aplikasi Accurate untuk transaksi, pengelolaan persediaan, invoice, dan surat jalan, serta melakukan pemeriksaan data dan dokumentasi solusi teknis.
             </p>
           </motion.div>
         </div>      
@@ -1118,6 +1161,80 @@ return (
     </div>
   </motion.div>
 )}
+
+
+{/* Project 04 - ZaiLiving */}
+{showAllProjects && (
+  <motion.div
+    className="project-card"
+    initial={{ opacity: 0, x: 50 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.7, delay: 0.4 }}
+    viewport={{ once: false }}
+  >
+    <div className="project-number">04</div>
+
+    <div className="project-preview">
+      <img
+        src="/project-04/kos.png"
+        alt="Preview ZaiLiving Property Rental Platform"
+      />
+    </div>
+
+    <div className="project-content">
+      <h3>ZaiLiving — Property Rental Platform</h3>
+
+      <p>
+        Platform pencarian dan penyewaan kos berbasis web dengan
+        desain modern dan responsif. Dilengkapi fitur pencarian
+        properti, detail kos, pengajuan sewa, serta dashboard
+        Tenant dan Owner untuk mengelola pengajuan dan properti.
+      </p>
+
+      <div className="project-features">
+        <span>Responsive</span>
+        <span>Property Search</span>
+        <span>Property Details</span>
+        <span>Rental Application</span>
+        <span>Tenant Dashboard</span>
+        <span>Owner Dashboard</span>
+      </div>
+
+      <div className="tech-stack">
+        <span>React</span>
+        <span>Vite</span>
+        <span>JavaScript</span>
+        <span>React Router DOM</span>
+        <span>CSS</span>
+        <span>localStorage</span>
+      </div>
+
+      <div className="project-links">
+        <button
+          type="button"
+          className="project-btn"
+          onClick={() => {
+            setSelectedProject(projectDetails.zaiLiving)
+            setSelectedImage(projectDetails.zaiLiving.gallery[0])
+          }}
+        >
+          View Detail
+        </button>
+
+        <a
+          href="https://github.com/hendrikwanputra-prog/ZaiLiving"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-btn outline"
+        >
+          GitHub
+        </a>
+      </div>
+    </div>
+  </motion.div>
+)}
+
+
 
 </div>  {/* tutup projects-grid */}
 
