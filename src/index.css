@@ -31,9 +31,3 @@ a {
   color: inherit;
 }
 
-.container-text {
-    display: flex;
-    flex-direction: column;
-    gap: 16px; /* Mengatur jarak otomatis antar elemen */
-    height: auto;
-}

@@ -511,6 +511,28 @@ body {
 
 /* MOBILE */
 @media (max-width: 900px) {
+
+  .section {
+    min-height: auto;
+    padding: 105px 6% 75px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; /* Mengunci lembar section pas di tengah layar HP */
+  }
+
+  .about-card, .skills-grid, .projects-grid, .contact-card {
+    width: 100% !important;
+    margin: 0 auto !important; /* Memaksa kotak konten utama presisi di tengah */
+  }
+
+  /* Memperbaiki teks subtitle biru agar mau ganti baris & posisinya di tengah */
+  .hero h2 {
+    font-size: 26px;
+    white-space: normal !important;
+    word-break: break-word !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
   .navbar {
     height: 78px;
     padding: 0 6%;
@@ -2504,13 +2526,16 @@ body {
   font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
 }
 
+/* KODE PERBAIKAN */
 .code-content p {
   margin: 0 0 11px;
   color: #cbd5e1;
   font-size: 14px;
   line-height: 1.6;
-  white-space: nowrap;
+  white-space: pre-wrap;   /* Mengizinkan teks ganti baris otomatis sesuai spasi */
+  word-break: break-word;  /* Memotong kata panjang agar pas dengan kotak */
 }
+
 
 .code-content .code-keyword {
   color: #c586c0 !important;
@@ -2722,4 +2747,52 @@ body {
 .experience-card:hover::after,
 .experience-card:first-child:hover::after {
   transform: scaleX(1) !important;
+}
+
+/* =======================================================
+   PREMIUM SKILL ICONS GLOW & COLOR MANAGEMENT
+   ======================================================= */
+
+/* 1. Atur ukuran ikon default agar seragam dan rapi */
+.skill-icon {
+  font-size: 32px !important; /* Membuat ikon sedikit lebih besar dan jelas */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* 2. Berikan warna asli yang modern pada masing-masing ikon */
+.skill-card.html .skill-icon { color: #e34c26; }       /* Orange HTML */
+.skill-card.css .skill-icon { color: #264de4; }        /* Blue CSS */
+.skill-card.javascript .skill-icon { color: #f7df1e; } /* Yellow JS */
+.skill-card.react .skill-icon { color: #61dafb; }      /* Neon Blue React */
+.skill-card.bootstrap .skill-icon { color: #7952b3; }  /* Purple Bootstrap */
+.skill-card.tailwind .skill-icon { color: #38bdf8; }   /* Cyan Tailwind */
+.skill-card.vite .skill-icon { color: #646cff; }       /* Purple-Indigo Vite */
+.skill-card.figma .skill-icon { color: #f24e1e; }      /* Coral Figma */
+
+.skill-card.php .skill-icon { color: #777bb4; }        /* Purple-Grey PHP */
+.skill-card.python .skill-icon { color: #3776ab; }     /* Blue Python */
+.skill-card.laravel .skill-icon { color: #ff2d20; }    /* Red Laravel */
+.skill-card.mysql .skill-icon { color: #00758f; }      /* Ocean Blue MySQL */
+.skill-card.mongodb .skill-icon { color: #47a248; }    /* Green MongoDB */
+.skill-card.supabase .skill-icon { color: #3ecf8e; }   /* Emerald Supabase */
+.skill-card.api .skill-icon { color: #00b4d8; }        /* Teal REST API */
+
+.skill-card.is .skill-icon { color: #64dfdf; }         /* Soft Cyan SI */
+.skill-card.troubleshoot .skill-icon { color: #ffb703; }/* Gold Troubleshoot */
+.skill-card.config .skill-icon { color: #9d4edd; }     /* Purple Config */
+.skill-card.maintenance .skill-icon { color: #4ea8de; }/* Sky Blue Maintenance */
+
+.skill-card.git .skill-icon { color: #f05032; }        /* Orange-Red Git */
+.skill-card.github .skill-icon { color: #ffffff; }     /* Pure White GitHub */
+.skill-card.vscode .skill-icon { color: #007acc; }     /* Bright Blue VS Code */
+.skill-card.xampp .skill-icon { color: #fb7a24; }      /* Orange XAMPP */
+.skill-card.m365 .skill-icon { color: #00a1f1; }       /* Office Corporate Blue */
+
+/* 3. EFEK MODERN HOVER: Ikon akan sedikit berputar & bersinar tipis saat disentuh */
+.skill-card:hover .skill-icon {
+  transform: scale(1.12) rotate(3deg);
+  filter: drop-shadow(0 0 8px currentColor); /* Efek glow otomatis sesuai warna ikon */
 }

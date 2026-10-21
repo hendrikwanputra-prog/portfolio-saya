@@ -10,6 +10,7 @@ import {
   FaLaravel,
   FaBootstrap,
   FaGithub,
+  FaGitAlt,
   FaEnvelope,
   FaLinkedinIn,
   FaInstagram,
@@ -26,6 +27,13 @@ import {
   FaFolderOpen,
   FaServer,
   FaDatabase,
+  FaWindows,
+  FaTerminal,
+  FaPython,
+  FaCogs,
+  FaCodeBranch,     /* 🚀 IKON BARU: Khusus untuk Troubleshoot Software (Bug/Debugging) */
+  FaLaptopCode,     /* 🚀 IKON BARU: Khusus untuk Maintenance App (Coding/Perawatan) */
+  FaCloudDownloadAlt /* 🚀 IKON BARU: Khusus untuk Konfigurasi App (Setup System/Cloud) */
 } from 'react-icons/fa'
 
 import {
@@ -33,11 +41,15 @@ import {
   SiTailwindcss,
   SiVite,
   SiFigma,
+  SiMongodb,
+  SiSupabase,
 } from 'react-icons/si'
 
 import { VscCode } from 'react-icons/vsc'
 import { supabase } from './supabaseClient'
 import './App.css'
+
+
 
 function App() {
 const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -484,89 +496,95 @@ return (
             Memiliki pengalaman di bidang Web Development dan IT Support, dengan keahlian dalam pengembangan aplikasi web, pemeliharaan sistem informasi, dan dukungan teknis. Menguasai PHP, Laravel, JavaScript, Python, dan MySQL, serta memahami RESTful API, pengelolaan basis data, debugging, dan desain UI/UX menggunakan Figma.
           </p>
 
-<div className="hero-buttons">
-  <a href="#projects" className="btn primary">
-    <FaFolderOpen />
-    View Projects
-  </a>
+          <div className="hero-buttons">
+            <a href="#projects" className="btn primary">
+              <FaFolderOpen />
+              View Projects
+            </a>
 
-  <a href="#contact" className="btn secondary">
-    <FaPaperPlane />
-    Contact Me
-  </a>
+            <a href="#contact" className="btn secondary">
+              <FaPaperPlane />
+              Contact Me
+            </a>
 
-  <a href="/cv-hendrikwan-putra.pdf" download className="btn outline">
-    <FaDownload />
-    Download CV
-  </a>
-</div>
-        </motion.div>
+            <a href="/cv-hendrikwan-putra.pdf" download className="btn outline">
+              <FaDownload />
+              Download CV
+            </a>
+          </div>
+                  </motion.div>
 
-        <motion.div
-          className="hero-card"
-          initial={{ opacity: 0, x: 60 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
- <div className="code-card">
-  <div className="code-card-header">
-    <div className="code-dots">
-      <span></span>
-      <span></span>
-      <span></span>
+       <motion.div
+  className="hero-card"
+  initial={{ opacity: 0, x: 60 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8, delay: 0.2 }}
+>
+  <div className="code-card">
+    <div className="code-card-header">
+      <div className="code-dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <p>developer.js</p>
     </div>
 
-    <p>developer.js</p>
+    {/* Mengunci agar teks otomatis turun ke bawah saat dibuka di HP */}
+    <div className="code-content" style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
+      <p>
+        <span className="code-keyword">const</span>{' '}
+        <span className="code-variable">developer</span>{' '}
+        <span className="code-operator">=</span>{' '}
+        <span className="code-bracket">{'{'}</span>
+      </p>
+
+      <p>
+        &nbsp;&nbsp;<span className="code-property">name</span>
+        <span className="code-operator">:</span>{' '}
+        <span className="code-string">"Hendrikwan Putra Zai"</span>
+        <span className="code-operator">,</span>
+      </p>
+
+      <p>
+        &nbsp;&nbsp;<span className="code-property">role</span>
+        <span className="code-operator">:</span>{' '}
+        <span className="code-string">"Web Developer | Software & Information Systems"</span>
+        <span className="code-operator">,</span>
+      </p>
+
+      <p>
+        &nbsp;&nbsp;<span className="code-property">stack</span>
+        <span className="code-operator">:</span>{' '}
+        <span className="code-bracket">[</span>
+        <span className="code-string">"React"</span>
+        <span className="code-operator">, </span>
+        <span className="code-string">"Laravel"</span>
+        <span className="code-operator">, </span>
+        <span className="code-string">"MySQL"</span>
+        <span className="code-operator">, </span>
+        <span className="code-string">"MongoDB"</span>
+        <span className="code-operator">, </span>
+        <span className="code-string">"Supabase"</span>
+        <span className="code-bracket">]</span>
+        <span className="code-operator">,</span>
+      </p>
+
+      <p>
+        &nbsp;&nbsp;<span className="code-property">focus</span>
+        <span className="code-operator">:</span>{' '}
+        <span className="code-string">"Development & Systems Support"</span>
+      </p>
+
+      <p>
+        <span className="code-bracket">{'}'}</span>
+      </p>
+    </div>
   </div>
+</motion.div>
+</section>
 
-  <div className="code-content">
-    <p>
-      <span className="code-keyword">const</span>{' '}
-      <span className="code-variable">developer</span>{' '}
-      <span className="code-operator">=</span>{' '}
-      <span className="code-bracket">&#123;</span>
-    </p>
-
-    <p>
-      &nbsp;&nbsp;<span className="code-property">name</span>
-      <span className="code-operator">:</span>{' '}
-      <span className="code-string">"Hendrikwan Putra Zai"</span>
-      <span className="code-operator">,</span>
-    </p>
-
-    <p>
-      &nbsp;&nbsp;<span className="code-property">role</span>
-      <span className="code-operator">:</span>{' '}
-      <span className="code-string">"Web Developer | Information Systems"</span>
-      <span className="code-operator">,</span>
-    </p>
-
-    <p>
-      &nbsp;&nbsp;<span className="code-property">stack</span>
-      <span className="code-operator">:</span>{' '}
-      <span className="code-bracket">[</span>
-      <span className="code-string">"React"</span>
-      <span className="code-operator">, </span>
-      <span className="code-string">"Laravel"</span>
-      <span className="code-operator">, </span>
-      <span className="code-string">"MySQL"</span>
-      <span className="code-bracket">]</span>
-      <span className="code-operator">,</span>
-    </p>
-
-    <p>
-      &nbsp;&nbsp;<span className="code-property">focus</span>
-      <span className="code-operator">:</span>{' '}
-      <span className="code-string">"focus: "Development & Systems Support""</span>
-    </p>
-
-    <p>
-      <span className="code-bracket">&#125;</span>
-    </p>
-  </div>
-</div>
-        </motion.div>
-      </section>
 
       <motion.section
         id="about"
@@ -642,11 +660,14 @@ return (
             viewport={{ once: false }}
           >
            <p>
-            Saya adalah lulusan Sistem Informasi yang berfokus pada pengembangan website dan aplikasi berbasis web. Saya memiliki ketertarikan dalam membangun sistem yang tidak hanya memiliki tampilan modern, tetapi juga mudah digunakan, responsif, dan sesuai dengan kebutuhan pengguna.
+            Saya adalah lulusan S1 Sistem Informasi dengan pengalaman dalam pengembangan website, aplikasi berbasis web, dan dukungan sistem IT. 
+            Saya berfokus pada pengembangan sistem yang fungsional, responsif, mudah digunakan, serta sesuai dengan kebutuhan pengguna.
           </p>
 
           <p>
-          Saya memiliki pengalaman dalam mengembangkan fitur CRUD, mengelola database, membangun antarmuka responsif, serta mengembangkan aplikasi menggunakan React, PHP, Laravel, MySQL, Tailwind CSS, dan Bootstrap. Saya terus mengembangkan kemampuan di bidang pengembangan aplikasi web dan solusi teknologi untuk menghasilkan sistem yang efektif dan fungsional.
+          Saya memiliki pengalaman mengembangkan fitur CRUD, mengelola basis data, membangun antarmuka responsif, serta mengembangkan aplikasi menggunakan PHP, Laravel, React.js, dan MySQL. 
+          Saya juga memiliki pemahaman dalam integrasi RESTful API, desain UI/UX menggunakan Figma, serta pemeliharaan dan troubleshooting aplikasi. 
+          Saya terus mengembangkan kemampuan untuk membangun solusi digital yang efektif, andal, dan memberikan nilai nyata bagi penggunanya.
           </p>
 
            <div className="about-info-grid">
@@ -709,8 +730,8 @@ return (
           <p>My Technical Skills</p>
           <h2>Skills</h2>
         </div>
-
-        <div className="skills-categories">
+<div className="skills-categories">
+          {/* 01. FRONTEND & UI/UX DESIGN */}
           <motion.div
             className="skill-category"
             initial={{ opacity: 0, x: -40 }}
@@ -721,8 +742,8 @@ return (
             <div className="category-header">
               <span>01</span>
               <div>
-                <h3>Frontend Development</h3>
-                <p>Membangun tampilan website yang modern dan responsif.</p>
+                <h3>Frontend & UI/UX Design</h3>
+                <p>Merancang interface modern dan membangun tampilan web responsif.</p>
               </div>
             </div>
 
@@ -731,9 +752,11 @@ return (
                 { name: 'HTML', icon: <FaHtml5 />, colorClass: 'html' },
                 { name: 'CSS', icon: <FaCss3Alt />, colorClass: 'css' },
                 { name: 'JavaScript', icon: <FaJs />, colorClass: 'javascript' },
-                { name: 'React', icon: <FaReact />, colorClass: 'react' },
+                { name: 'React.js', icon: <FaReact />, colorClass: 'react' },
                 { name: 'Bootstrap', icon: <FaBootstrap />, colorClass: 'bootstrap' },
                 { name: 'Tailwind CSS', icon: <SiTailwindcss />, colorClass: 'tailwind' },
+                { name: 'Vite', icon: <SiVite />, colorClass: 'vite' },
+                { name: 'Figma', icon: <SiFigma />, colorClass: 'figma' },
               ].map((skill, index) => (
                 <motion.div
                   className={`skill-card ${skill.colorClass || ''}`}
@@ -750,6 +773,7 @@ return (
             </div>
           </motion.div>
 
+          {/* 02. BACKEND & DATABASES */}
           <motion.div
             className="skill-category"
             initial={{ opacity: 0, x: 40 }}
@@ -760,18 +784,20 @@ return (
             <div className="category-header">
               <span>02</span>
               <div>
-                <h3>Backend & Database</h3>
-                <p>Mengelola sistem, proses data, dan database aplikasi.</p>
+                <h3>Backend & Databases</h3>
+                <p>Mengelola logika server, arsitektur data, dan integrasi API.</p>
               </div>
             </div>
 
             <div className="category-skills">
               {[
                 { name: 'PHP', icon: <FaPhp />, colorClass: 'php' },
+                { name: 'Python', icon: <FaPython />, colorClass: 'python' },
                 { name: 'Laravel', icon: <FaLaravel />, colorClass: 'laravel' },
                 { name: 'MySQL', icon: <SiMysql />, colorClass: 'mysql' },
-                { name: 'REST API', icon: <FaServer />, colorClass: 'api' },
-                { name: 'CRUD System', icon: <FaDatabase />, colorClass: 'database' },
+                { name: 'MongoDB', icon: <SiMongodb />, colorClass: 'mongodb' },
+                { name: 'Supabase', icon: <SiSupabase />, colorClass: 'supabase' },
+                { name: 'RESTful API', icon: <FaServer />, colorClass: 'api' },
               ].map((skill, index) => (
                 <motion.div
                   className={`skill-card ${skill.colorClass || ''}`}
@@ -788,6 +814,7 @@ return (
             </div>
           </motion.div>
 
+            {/* 03. IT SUPPORT & SYSTEMS */}
           <motion.div
             className="skill-category"
             initial={{ opacity: 0, x: -40 }}
@@ -798,17 +825,19 @@ return (
             <div className="category-header">
               <span>03</span>
               <div>
-                <h3>UI/UX Design</h3>
-                <p>Merancang tampilan dan prototype aplikasi yang mudah digunakan.</p>
+                <h3>IT Support & Systems</h3>
+                <p>Pemeliharaan sistem informasi, konfigurasi, dan dukungan teknis.</p>
               </div>
             </div>
 
-            <div className="category-skills">
+                     <div className="category-skills">
               {[
-                  { name: 'Figma', icon: <SiFigma />, colorClass: 'figma' },
-                  { name: 'Wireframing', icon: <SiFigma />, colorClass: 'wireframe' },
-                  { name: 'Prototyping', icon: <SiFigma />, colorClass: 'prototype' },
+                  { name: 'Tata Kelola SI', icon: <FaCode />, colorClass: 'is' },
+                  { name: 'Software Debugging', icon: <FaCodeBranch />, colorClass: 'troubleshoot' },
+                  { name: 'Konfigurasi Sistem', icon: <FaCloudDownloadAlt />, colorClass: 'config' },
+                  { name: 'System Maintenance', icon: <FaLaptopCode />, colorClass: 'maintenance' },
               ].map((skill, index) => (
+
                 <motion.div
                   className={`skill-card ${skill.colorClass || ''}`}
                   key={skill.name}
@@ -824,6 +853,9 @@ return (
             </div>
           </motion.div>
 
+
+
+          {/* 04. TOOLS & WORKFLOW */}
           <motion.div
             className="skill-category skill-category-tools"
             initial={{ opacity: 0, y: 35 }}
@@ -835,16 +867,17 @@ return (
               <span>04</span>
               <div>
                 <h3>Tools & Workflow</h3>
-                <p>Tools yang digunakan dalam proses pengembangan project.</p>
+                <p>Alat dan platform penunjang produktivitas pengembangan proyek.</p>
               </div>
             </div>
 
             <div className="category-skills">
               {[
+                { name: 'Git', icon: <FaGitAlt />, colorClass: 'git' },
                 { name: 'GitHub', icon: <FaGithub />, colorClass: 'github' },
-                { name: 'Vite', icon: <SiVite />, colorClass: 'vite' },
                 { name: 'VS Code', icon: <VscCode />, colorClass: 'vscode' },
-
+                { name: 'XAMPP', icon: <FaTerminal />, colorClass: 'xampp' },
+                { name: 'Microsoft 365', icon: <FaWindows />, colorClass: 'm365' },
               ].map((skill, index) => (
                 <motion.div
                   className={`skill-card ${skill.colorClass || ''}`}
@@ -924,7 +957,7 @@ return (
             <div className="experience-year">
               September 2023 - Mei 2025
             </div>
-            <h3>IT Support & Application Support</h3>
+            <h3>IT Support & Web Developer</h3>
             <h4>OQ Clinic Dentist</h4>
             <p>
               Menangani troubleshooting perangkat lunak dan sistem IT, melakukan instalasi, konfigurasi, 
