@@ -488,9 +488,10 @@ return (
             Available for Web Developer Roles
           </div>
 
-          <p className="hero-greeting">Hello, I'm</p>
-          <h1>Hendrikwan Putra Zai</h1>
-          <h2>Web Developer | IT Systems | IT Support</h2>
+<p className="hero-greeting">Hello, I'm</p>
+<h1 className="nama-gradient">Hendrikwan Putra Zai</h1> {/* <- Tambahkan className ini */}
+<h2>Web Developer | IT Systems | IT Support</h2>
+
 
           <p className="description">
             Memiliki pengalaman di bidang Web Development dan IT Support, dengan keahlian dalam pengembangan aplikasi web, pemeliharaan sistem informasi, dan dukungan teknis. Menguasai PHP, Laravel, JavaScript, Python, dan MySQL, serta memahami RESTful API, pengelolaan basis data, debugging, dan desain UI/UX menggunakan Figma.
@@ -507,12 +508,16 @@ return (
               Contact Me
             </a>
 
+            {/* Tombol CV di-hide sementara untuk publikasi di IG agar aman dari spam */}
+            {/* 
             <a href="/cv-hendrikwan-putra.pdf" download className="btn outline">
               <FaDownload />
               Download CV
             </a>
+            */}
           </div>
-                  </motion.div>
+        </motion.div>
+
 
        <motion.div
   className="hero-card"
@@ -543,7 +548,7 @@ return (
       <p>
         &nbsp;&nbsp;<span className="code-property">name</span>
         <span className="code-operator">:</span>{' '}
-        <span className="code-string">"Hendrikwan Putra Zai"</span>
+       "<span className="code-highlight">Hendrikwan Putra Zai</span>"
         <span className="code-operator">,</span>
       </p>
 
@@ -646,11 +651,15 @@ return (
   </a>
 </div>
 
-<a href="/cv-hendrikwan-putra.pdf" download className="about-cv-btn">
-  <FaDownload />
-  Download CV
-</a>
-          </motion.div>
+  {/* Tombol CV di halaman About di-hide sementara agar aman dari spam media sosial */}
+  {/* 
+  <a href="/cv-hendrikwan-putra.pdf" download className="about-cv-btn">
+    <FaDownload />
+    Download CV
+  </a>
+  */}
+</motion.div>
+
 
           <motion.div
             className="about-content-card"
@@ -921,9 +930,9 @@ return (
             <h3>Web Developer - Academic Project</h3>
             <h4>Sistem Rekam Medis Klinik Gigi</h4>
             <p>
-              Mengembangkan aplikasi berbasis web untuk mengelola data pasien,
-              dokter, rekam medis, diagnosa, tindakan, pembayaran, dan laporan
-              klinik menggunakan Laravel, PHP, MySQL, dan Bootstrap.
+              Merancang dan mengembangkan sistem informasi rekam medis berbasis web untuk mengoptimalkan pengelolaan data pasien, dokter, diagnosa, tindakan, hingga sistem pembayaran klinik. 
+              Membangun arsitektur basis data serta modul laporan otomatis menggunakan tech stack PHP (Laravel) dan MySQL, 
+              serta mengimplementasikan Bootstrap untuk memastikan tampilan antarmuka yang responsif dan mudah digunakan.
             </p>
           </motion.div>
 
@@ -940,10 +949,9 @@ return (
             <h3>BMN Data Management Internship</h3>
             <h4>Kementerian Ekonomi Kreatif (EKRAF)</h4>
             <p>
-              Mengelola data BMN melalui aplikasi SIMAN, melakukan input,
-              pengecekan, pembaruan, dan verifikasi data aset berdasarkan
-              dokumen pendukung, serta membantu penyusunan laporan data aset
-              secara rapi dan terstruktur.
+              Mengelola data BMN melalui aplikasi SIMAN, mencakup proses input, pengecekan, serta pembaruan data aset negara secara berkala. 
+              Memverifikasi validitas data aset berdasarkan dokumen pendukung dan melakukan rekonsiliasi data antara dokumen fisik dengan sistem. 
+              Aktif menyusun laporan data aset secara rapi dan terstruktur untuk memastikan akurasi data inventarisasi.
             </p>
           </motion.div>
 
@@ -980,8 +988,8 @@ return (
             <h3>IT Support & Application Support</h3>
             <h4>PT Valche Pelita Indonesia</h4>
             <p>
-              Menangani troubleshooting perangkat lunak dan aplikasi operasional perusahaan, termasuk instalasi, konfigurasi, serta pemeliharaan software. 
-              Menangani kendala penggunaan aplikasi Accurate untuk transaksi, pengelolaan persediaan, invoice, dan surat jalan, serta melakukan pemeriksaan data dan dokumentasi solusi teknis.
+             Menangani troubleshooting, instalasi, konfigurasi, dan pemeliharaan software operasional perusahaan. Memelihara modul data transaksi dan logistik, 
+             serta melakukan integrasi dokumen digital pada aplikasi Accurate. Aktif melakukan audit integritas data dan mendokumentasikan solusi teknis secara terstruktur.
             </p>
           </motion.div>
         </div>      

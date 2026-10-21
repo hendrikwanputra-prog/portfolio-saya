@@ -2796,3 +2796,33 @@ body {
   transform: scale(1.12) rotate(3deg);
   filter: drop-shadow(0 0 8px currentColor); /* Efek glow otomatis sesuai warna ikon */
 }
+
+.nama-gradient {
+  background: linear-gradient(to right, #00bfff, #a855f7, #ff2a85);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  font-weight: 800; 
+}
+
+/* Dijadikan satu agar lebih rapi */
+.hero h2 {
+  color: #ffffff; 
+  opacity: 0.9;   
+  margin-bottom: 24px; 
+}
+
+/* Perbaikan kursor melar dan merapatkan jarak bawah di HP */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 1.1rem !important; 
+    line-height: 1.2 !important;
+    white-space: nowrap !important; 
+    overflow: visible !important;
+    
+    /* MENGURANGI JARAK BAWAH: */
+    margin-bottom: 8px !important;  /* Memangkas jarak ke paragraf deskripsi */
+    padding-bottom: 0 !important;   /* Menghilangkan padding bawah jika ada */
+  }
+}

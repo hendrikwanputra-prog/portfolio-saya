@@ -31,3 +31,7 @@ a {
   color: inherit;
 }
 
+.code-highlight {
+  color: #ff2a85; /* Warna pink neon yang sama dengan gradasi namamu */
+  font-weight: 600;
+}
