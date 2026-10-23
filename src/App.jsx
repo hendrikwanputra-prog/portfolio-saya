@@ -494,7 +494,8 @@ return (
 
 
           <p className="description">
-            Memiliki pengalaman di bidang Web Development dan IT Support, dengan keahlian dalam pengembangan aplikasi web, pemeliharaan sistem informasi, dan dukungan teknis. Menguasai PHP, Laravel, JavaScript, Python, dan MySQL, serta memahami RESTful API, pengelolaan basis data, debugging, dan desain UI/UX menggunakan Figma.
+            Experienced in Web Development and IT Support, with expertise in web application development, information system maintenance, and technical support. 
+            Proficient in PHP, Laravel, JavaScript, Python, and MySQL, with knowledge of RESTful APIs, database management, debugging, and UI/UX design using Figma.
           </p>
 
           <div className="hero-buttons">
@@ -669,14 +670,13 @@ return (
             viewport={{ once: false }}
           >
            <p>
-            Saya adalah lulusan S1 Sistem Informasi dengan pengalaman dalam pengembangan website, aplikasi berbasis web, dan dukungan sistem IT. 
-            Saya berfokus pada pengembangan sistem yang fungsional, responsif, mudah digunakan, serta sesuai dengan kebutuhan pengguna.
+            I am an Information Systems graduate with experience in website development, web-based applications, and IT systems support. 
+            I focus on developing functional, responsive, and user-friendly systems that meet user needs.
           </p>
 
           <p>
-          Saya memiliki pengalaman mengembangkan fitur CRUD, mengelola basis data, membangun antarmuka responsif, serta mengembangkan aplikasi menggunakan PHP, Laravel, React.js, dan MySQL. 
-          Saya juga memiliki pemahaman dalam integrasi RESTful API, desain UI/UX menggunakan Figma, serta pemeliharaan dan troubleshooting aplikasi. 
-          Saya terus mengembangkan kemampuan untuk membangun solusi digital yang efektif, andal, dan memberikan nilai nyata bagi penggunanya.
+          I have experience developing CRUD features, managing databases, building responsive interfaces, and developing applications using PHP, Laravel, React.js, and MySQL. I also have knowledge of RESTful API integration, UI/UX design using Figma, as well as application maintenance and troubleshooting. 
+          I continuously enhance my skills to build effective, reliable digital solutions that deliver real value to users.
           </p>
 
            <div className="about-info-grid">
@@ -752,7 +752,7 @@ return (
               <span>01</span>
               <div>
                 <h3>Frontend & UI/UX Design</h3>
-                <p>Merancang interface modern dan membangun tampilan web responsif.</p>
+                <p>Designing modern interfaces and building responsive web layouts.</p>
               </div>
             </div>
 
@@ -794,7 +794,7 @@ return (
               <span>02</span>
               <div>
                 <h3>Backend & Databases</h3>
-                <p>Mengelola logika server, arsitektur data, dan integrasi API.</p>
+                <p>Managing server-side logic, data architecture, and API integration.</p>
               </div>
             </div>
 
@@ -835,15 +835,15 @@ return (
               <span>03</span>
               <div>
                 <h3>IT Support & Systems</h3>
-                <p>Pemeliharaan sistem informasi, konfigurasi, dan dukungan teknis.</p>
+                <p>Information system maintenance, configuration, and technical support.</p>
               </div>
             </div>
 
                      <div className="category-skills">
               {[
-                  { name: 'Tata Kelola SI', icon: <FaCode />, colorClass: 'is' },
+                  { name: 'Information Systems Governance', icon: <FaCode />, colorClass: 'is' },
                   { name: 'Software Debugging', icon: <FaCodeBranch />, colorClass: 'troubleshoot' },
-                  { name: 'Konfigurasi Sistem', icon: <FaCloudDownloadAlt />, colorClass: 'config' },
+                  { name: 'System Configuration', icon: <FaCloudDownloadAlt />, colorClass: 'config' },
                   { name: 'System Maintenance', icon: <FaLaptopCode />, colorClass: 'maintenance' },
               ].map((skill, index) => (
 
@@ -876,7 +876,7 @@ return (
               <span>04</span>
               <div>
                 <h3>Tools & Workflow</h3>
-                <p>Alat dan platform penunjang produktivitas pengembangan proyek.</p>
+                <p>Tools and platforms that support efficient project development.</p>
               </div>
             </div>
 
@@ -1315,8 +1315,7 @@ return (
 
         <div className="contact-card">
           <p>
-           Saya terbuka untuk peluang kerja, freelance, magang, maupun kolaborasi
-           dalam pengembangan website dan aplikasi berbasis web.
+           I offer full-stack web development services to build modern, responsive, and functional websites and web applications tailored to your needs.
           </p>
 
           <div className="contact-list">
@@ -1413,7 +1412,7 @@ return (
 
             <div>
               <h3>Leave a Review</h3>
-              <p>Bagikan pendapat atau pengalaman bekerja bersama saya.</p>
+              <p>Share your feedback or experience working with me.</p>
             </div>
           </div>
 
@@ -1493,7 +1492,7 @@ return (
               </p>
             )}
             <small className="review-note">
-              Review akan ditampilkan setelah disetujui.
+              Reviews will be displayed once approved.
             </small>
           </form>
         </motion.div>
@@ -1512,7 +1511,7 @@ return (
 
             <div>
               <h3>Approved Reviews</h3>
-              <p>Review asli yang telah disetujui akan tampil di sini.</p>
+              <p>Approved genuine reviews will appear here.</p>
             </div>
           </div>
 
@@ -1526,7 +1525,7 @@ return (
               <FaQuoteLeft />
               <h4>No reviews yet</h4>
               <p>
-                Jadilah orang pertama yang memberikan feedback untuk portofolio ini.
+               Be the first to leave feedback on this portfolio.
               </p>
             </div>
           ) : (
