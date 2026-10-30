@@ -490,7 +490,7 @@ return (
 
 <p className="hero-greeting">Hello, I'm</p>
 <h1 className="nama-gradient">Hendrikwan Putra Zai</h1> {/* <- Tambahkan className ini */}
-<h2>Web Development | IT Systems | Business Operationst</h2>
+<h2>Web Development | IT Systems | IT Support</h2>
 
 
           <p className="description">
