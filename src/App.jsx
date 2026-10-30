@@ -490,7 +490,7 @@ return (
 
 <p className="hero-greeting">Hello, I'm</p>
 <h1 className="nama-gradient">Hendrikwan Putra Zai</h1> {/* <- Tambahkan className ini */}
-<h2>Web Developer | IT Systems | IT Support</h2>
+<h2>Web Development | IT Systems | Business Operationst</h2>
 
 
           <p className="description">
@@ -621,7 +621,6 @@ return (
 
             <div className="about-photo-info">
               <h3>Hendrikwan Putra Zai</h3>
-              <p>Web Developer | IT Systems | IT Support</p>
             </div>
 
             <div className="about-socials">
@@ -630,9 +629,14 @@ return (
   </a>
   
 
-  <a href="#" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-    <FaLinkedinIn />
-  </a>
+<a
+  href="https://www.linkedin.com/in/hendrikwan-putra-zai-287b37403/"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="LinkedIn"
+>
+  <FaLinkedinIn />
+</a>
 
   <a
   href="https://github.com/hendrikwanputra-prog"
@@ -720,7 +724,7 @@ return (
 
               <div>
                 <span>Status</span>
-                <h4>Open to Opportunities</h4>
+                <h4>Currently Working</h4>
               </div>
             </div>
           </div>
@@ -1333,21 +1337,21 @@ return (
               </span>
             </a>
 
-            <a
-              href="https://www.linkedin.com/in/hendrikwan-putra-287b37403"
-              target="_blank"
-              rel="noreferrer"
-              className="contact-item"
-            >
-              <span className="contact-icon">
-                <FaLinkedinIn />
-              </span>
+ <a
+  href="https://www.linkedin.com/in/hendrikwan-putra-zai-287b37403/"
+  target="_blank"
+  rel="noreferrer"
+  className="contact-item"
+>
+  <span className="contact-icon">
+    <FaLinkedinIn />
+  </span>
 
-              <span className="contact-text">
-                <strong>LinkedIn</strong>
-                <small>Connect with me</small>
-              </span>
-            </a>
+  <span className="contact-text">
+    <strong>LinkedIn</strong>
+    <small>Connect with me</small>
+  </span>
+</a>
 
             <a
               href="https://www.instagram.com/oneputraa_/"
@@ -1364,6 +1368,8 @@ return (
                 <small>@oneputraa_</small>
               </span>
             </a>
+
+            
 
             <a
               href="https://wa.me/6282163339515"
