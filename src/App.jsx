@@ -52,17 +52,22 @@ import './App.css'
 
 
 function App() {
-const [isMenuOpen, setIsMenuOpen] = useState(false)
-const [selectedProject, setSelectedProject] = useState(null)
-const [showAllProjects, setShowAllProjects] = useState(false)
-const [selectedImage, setSelectedImage] = useState(null)
-const [activeSection, setActiveSection] = useState('home')
-const [showScrollTop, setShowScrollTop] = useState(false)
-const [approvedReviews, setApprovedReviews] = useState([])
-const [isLoadingReviews, setIsLoadingReviews] = useState(true)
-const [showIntro, setShowIntro] = useState(true)
-const [reviewForm, setReviewForm] = useState({
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [selectedProject, setSelectedProject] = useState(null)
+  const [showAllProjects, setShowAllProjects] = useState(false)
+  const [selectedImage, setSelectedImage] = useState(null)
 
+  // Experience
+  const [selectedExperience, setSelectedExperience] = useState(null)
+  const [showAllExperiences, setShowAllExperiences] = useState(false)
+
+  const [activeSection, setActiveSection] = useState('home')
+  const [showScrollTop, setShowScrollTop] = useState(false)
+  const [approvedReviews, setApprovedReviews] = useState([])
+  const [isLoadingReviews, setIsLoadingReviews] = useState(true)
+  const [showIntro, setShowIntro] = useState(true)
+  const [reviewForm, setReviewForm] = useState({
+    
   name: '',
   role: '',
   message: '',
@@ -488,14 +493,24 @@ return (
             Available for Web Developer Roles
           </div>
 
-<p className="hero-greeting">Hello, I'm</p>
-<h1 className="nama-gradient">Hendrikwan Putra Zai</h1> {/* <- Tambahkan className ini */}
-<h2>Web Development | IT Systems | IT Support</h2>
+          
+          <p className="hero-greeting">Hello, I'm</p>
+
+          <h1 className="nama-gradient">Hendrikwan Putra Zai</h1>
+
+          {/* 2. SUBTITLE YANG SUDAH PERFEK DI HP */}
+          <h2 className="hero-subtitle">
+            Information Systems <span className="hero-separator">|</span> <br className="mobile-break" />
+            Business Operations <span className="hero-separator">|</span> <br className="mobile-break" />
+            <span className="last-word">Web Development</span>
+          </h2>
+
 
 
           <p className="description">
-            Experienced in Web Development and IT Support, with expertise in web application development, information system maintenance, and technical support. 
-            Proficient in PHP, Laravel, JavaScript, Python, and MySQL, with knowledge of RESTful APIs, database management, debugging, and UI/UX design using Figma.
+            Information Systems graduate with experience in Business Operations and Web Development. 
+            Skilled in managing information systems, supporting operational processes, and developing web-based applications. 
+            Proficient in PHP, Laravel, JavaScript, Python, and MySQL, with knowledge of database management, RESTful APIs, and system troubleshooting.
           </p>
 
           <div className="hero-buttons">
@@ -580,7 +595,7 @@ return (
       <p>
         &nbsp;&nbsp;<span className="code-property">focus</span>
         <span className="code-operator">:</span>{' '}
-        <span className="code-string">"Development & Systems Support"</span>
+        <span className="code-string">"Software Development & Systems"</span>
       </p>
 
       <p>
@@ -639,7 +654,7 @@ return (
 </a>
 
   <a
-  href="https://github.com/hendrikwanputra-prog"
+  href="https://github.com/hendrikwan-prog"
   target="_blank"
   rel="noopener noreferrer"
 >
@@ -674,13 +689,13 @@ return (
             viewport={{ once: false }}
           >
            <p>
-            I am an Information Systems graduate with experience in website development, web-based applications, and IT systems support. 
-            I focus on developing functional, responsive, and user-friendly systems that meet user needs.
+            I am an Information Systems graduate with experience in Business Operations, Web Development, and IT Systems Support. 
+            I have a strong interest in developing technology-driven solutions, managing information systems, and supporting efficient business processes.
           </p>
 
           <p>
-          I have experience developing CRUD features, managing databases, building responsive interfaces, and developing applications using PHP, Laravel, React.js, and MySQL. I also have knowledge of RESTful API integration, UI/UX design using Figma, as well as application maintenance and troubleshooting. 
-          I continuously enhance my skills to build effective, reliable digital solutions that deliver real value to users.
+          My technical skills include PHP, Laravel, JavaScript, React.js, and MySQL, with knowledge of RESTful API integration, database management, responsive web development, UI/UX design using Figma, and system troubleshooting. 
+          I am committed to continuous learning and delivering effective solutions that align with business and user needs.
           </p>
 
            <div className="about-info-grid">
@@ -702,7 +717,7 @@ return (
 
               <div>
                 <span>Major</span>
-                <h4>S1 Sistem Informasi</h4>
+                <h4>Bachelor of Information Systems</h4>
               </div>
             </div>
 
@@ -909,7 +924,7 @@ return (
         </div>
       </motion.section>
 
-      <motion.section
+<motion.section
         id="experience"
         className="section"
         initial={{ opacity: 0, y: 60 }}
@@ -924,6 +939,25 @@ return (
 
         <div className="experience-grid">
           <motion.div
+  className="experience-card"
+  initial={{ opacity: 0, y: 35 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: false }}
+>
+  <div className="experience-year">
+    October 2026 - Present
+  </div>
+  <h3>Remedial & Recovery </h3>
+  <h4>FIFGROUP (PT Federal International Finance) </h4>
+  <p>
+    Supporting administrative and operational functions within the Remedial & Recovery department, 
+    including daily report preparation, operational performance monitoring, data verification, 
+    and documentation management. Assisting with incentive administration, budget monitoring, 
+    and departmental coordination to ensure data accuracy, efficient workflows, and effective operational processes.
+  </p>
+</motion.div>
+          <motion.div
             className="experience-card"
             initial={{ opacity: 0, y: 35 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -932,72 +966,100 @@ return (
           >
             <div className="experience-year">17 April 2026 - 10 Augustus 2026</div>
             <h3>Web Developer - Academic Project</h3>
-            <h4>Sistem Rekam Medis Klinik Gigi</h4>
+            <h4>Dental Clinic Medical Record Information System</h4>
             <p>
-              Merancang dan mengembangkan sistem informasi rekam medis berbasis web untuk mengoptimalkan pengelolaan data pasien, dokter, diagnosa, tindakan, hingga sistem pembayaran klinik. 
-              Membangun arsitektur basis data serta modul laporan otomatis menggunakan tech stack PHP (Laravel) dan MySQL, 
-              serta mengimplementasikan Bootstrap untuk memastikan tampilan antarmuka yang responsif dan mudah digunakan.
+              Designed and developed a web-based medical record information system to streamline the management of patient and doctor data, 
+              diagnoses, medical procedures, and clinic payment processes. 
+              Developed the database architecture and automated reporting modules using PHP (Laravel) and MySQL, 
+              while implementing Bootstrap to create a responsive, user-friendly interface.
             </p>
           </motion.div>
 
-          <motion.div
-            className="experience-card"
-            initial={{ opacity: 0, y: 35 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.12 }}
-            viewport={{ once: false }}
-          >
-            <div className="experience-year">
-              Oktober 2025 - Januari 2026
-            </div>
-            <h3>BMN Data Management Internship</h3>
-            <h4>Kementerian Ekonomi Kreatif (EKRAF)</h4>
-            <p>
-              Mengelola data BMN melalui aplikasi SIMAN, mencakup proses input, pengecekan, serta pembaruan data aset negara secara berkala. 
-              Memverifikasi validitas data aset berdasarkan dokumen pendukung dan melakukan rekonsiliasi data antara dokumen fisik dengan sistem. 
-              Aktif menyusun laporan data aset secara rapi dan terstruktur untuk memastikan akurasi data inventarisasi.
-            </p>
-          </motion.div>
+          {/* Sisa 3 kartu di bawah ini dibungkus agar tersembunyi di awal */}
+          {showAllExperiences && (
+            <>
+              <motion.div
+                className="experience-card"
+                initial={{ opacity: 0, y: 35 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.12 }}
+                viewport={{ once: false }}
+              >
+                <div className="experience-year">
+                  Oktober 2025 - Januari 2026
+                </div>
+                <h3>BMN Data Management Internship</h3>
+                <h4> EKRAF (Kementerian Ekonomi Kreatif) </h4>
+                <p>
+                  Managed State-Owned Assets (BMN) data through the SIMAN application, including data entry, verification, 
+                  and regular updates of government asset records. Verified asset information against supporting documents and performed data reconciliation between physical records and system records. 
+                  Prepared accurate and well-organized asset reports to support reliable inventory management and data accuracy.
+                </p>
+              </motion.div>
 
-          <motion.div
-            className="experience-card"
-            initial={{ opacity: 0, y: 35 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.24 }}
-            viewport={{ once: false }}
-          >
-            <div className="experience-year">
-              September 2023 - Mei 2025
-            </div>
-            <h3>IT Support & Web Developer</h3>
-            <h4>OQ Clinic Dentist</h4>
-            <p>
-              Menangani troubleshooting perangkat lunak dan sistem IT, melakukan instalasi, konfigurasi, 
-              serta pemeliharaan aplikasi dan sistem informasi. 
-              Memberikan dukungan teknis kepada staf klinik serta merancang dan 
-              mengembangkan Sistem Informasi Rekam Medis Berbasis Web menggunakan Laravel dan MySQL.
-            </p>
-          </motion.div>
+              <motion.div
+                className="experience-card"
+                initial={{ opacity: 0, y: 35 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.24 }}
+                viewport={{ once: false }}
+              >
+                <div className="experience-year">
+                  September 2023 - Mei 2025
+                </div>
+                <h3>IT Support & Web Developer</h3>
+                <h4>OQ Clinic Dentist</h4>
+                <p>
+                  Handled software and IT system troubleshooting, installation, configuration, 
+                  and maintenance of applications and information systems. 
+                  Provided technical support to clinic staff while designing and developing a web-based Medical Record Information System using Laravel and MySQL to improve patient data management and administrative efficiency.
+                </p>
+              </motion.div>
 
-          <motion.div
-            className="experience-card"
-            initial={{ opacity: 0, y: 35 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.36 }}
-            viewport={{ once: false }}
+              <motion.div
+                className="experience-card"
+                initial={{ opacity: 0, y: 35 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.36 }}
+                viewport={{ once: false }}
+              >
+                <div className="experience-year">
+                  Februari 2022 - Juni 2023
+                </div>
+                <h3>IT Support & Application Support</h3>
+                <h4>PT Valche Pelita Indonesia</h4>
+                <p>
+                Handled troubleshooting, installation, configuration, and maintenance of the company's operational software. 
+                Maintained transaction and logistics data modules, supported digital document integration within the Accurate application, 
+                and conducted data integrity checks while documenting technical issues and solutions in a structured manner.
+                </p>
+              </motion.div>
+            </>
+          )}
+
+        </div>{/* tutup experience-grid */}      
+
+        {/* Tombol View All di bagian tengah bawah */}
+        <div className="experience-more" style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
+          <button
+            type="button"
+            className="projects-more-btn" // Menggunakan class projek Anda agar desain tombolnya otomatis sama persis
+            onClick={() => setShowAllExperiences(!showAllExperiences)}
           >
-            <div className="experience-year">
-              Februari 2022 - Juni 2023
-            </div>
-            <h3>IT Support & Application Support</h3>
-            <h4>PT Valche Pelita Indonesia</h4>
-            <p>
-             Menangani troubleshooting, instalasi, konfigurasi, dan pemeliharaan software operasional perusahaan. Memelihara modul data transaksi dan logistik, 
-             serta melakukan integrasi dokumen digital pada aplikasi Accurate. Aktif melakukan audit integritas data dan mendokumentasikan solusi teknis secara terstruktur.
-            </p>
-          </motion.div>
-        </div>      
-        </motion.section>
+            {showAllExperiences ? (
+              <>
+                Show Less <span>↑</span>
+              </>
+            ) : (
+              <>
+                View All Experiences <span>→</span>
+              </>
+            )}
+          </button>
+        </div>
+
+</motion.section>
+
 
         <motion.section
         id="projects"
@@ -1515,10 +1577,10 @@ return (
               <FaQuoteLeft />
             </span>
 
-            <div>
-              <h3>Approved Reviews</h3>
-              <p>Approved genuine reviews will appear here.</p>
-            </div>
+          <div>
+          <h3>Testimonials</h3>
+          <p>Feedback and experiences shared by people I have worked with.</p>
+        </div>
           </div>
 
           {isLoadingReviews ? (

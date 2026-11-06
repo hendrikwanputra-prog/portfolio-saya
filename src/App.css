@@ -2826,3 +2826,66 @@ body {
     padding-bottom: 0 !important;   /* Menghilangkan padding bawah jika ada */
   }
 }
+
+.hero-subtitle {
+  font-size: 22px;
+  line-height: 1.5;
+  white-space: normal;
+  text-align: center;
+}
+
+/* Tampilan HP */
+@media (max-width: 768px) {
+  .hero-subtitle {
+    font-size: 16px;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+
+/* Styling default untuk tampilan Laptop (Desktop) */
+.hero-subtitle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start; /* Ubah ke 'center' jika teks Anda di laptop rata tengah */
+  align-items: center;
+}
+
+/* Secara default, sembunyikan fitur pindah baris di laptop */
+.mobile-break {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* 1. Matikan border-right/cursor animasi di elemen utama h2 */
+  .hero-subtitle {
+    border-right: none !important; 
+    text-align: center;
+    display: block;
+  }
+
+  /* 2. Pindahkan animasi cursor-nya ke kata terakhir */
+  .hero-subtitle .last-word {
+    border-right: 3px solid #00d2ff; /* Sesuaikan ketebalan & warna biru cursor Anda */
+    padding-right: 4px;
+    /* Masukkan nama animasi ketik/kedip Anda di bawah ini jika ada */
+    animation: blink 0.75s step-end infinite; 
+  }
+
+  .mobile-break {
+    display: block;
+  }
+  .hero-subtitle .hero-separator {
+    display: none !important;
+  }
+}
+
+/* Jika belum ada animasi kedip cursor-nya di file CSS, tambahkan ini: */
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: #00d2ff; }
+}
+
+
+
